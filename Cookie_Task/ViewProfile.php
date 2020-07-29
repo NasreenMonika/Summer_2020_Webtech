@@ -6,33 +6,33 @@
 			<tr>
 				<td>Name</td>
 				<td>:</td>
-				<td>Bob</td>
+				<td><?php echo $_COOKIE['uname']?></td>
 				<td rowspan="7" align="center">
 					<img width="128" src="../image/user.png"/>
                     <br/>
-                    <a href="../write/picture.html">Change</a>
+                    <a href="ChangeProfilePicture.php">Change</a>
 				</td>
 			</tr>		
 			<tr><td colspan="3"><hr/></td></tr>
 			<tr>
 				<td>Email</td>
 				<td>:</td>
-				<td>bob@aiub.edu</td>
+				<td><?php echo $_COOKIE['email']?></td>
 			</tr>		
 			<tr><td colspan="3"><hr/></td></tr>			
 			<tr>
 				<td>Gender</td>
 				<td>:</td>
-				<td>Male</td>
+				<td><?php echo $_COOKIE['gender']?></td>
 			</tr>
 			<tr><td colspan="3"><hr/></td></tr>
 			<tr>
 				<td>Date of Birth</td>
 				<td>:</td>
-				<td>19/09/1998</td>
+				<td><?php echo $_COOKIE['day']."/".$_COOKIE['month']."/".$_COOKIE['year']?></td>
 			</tr>
 		</table>	
         <hr/>
-        <a href="../write/edit_profile.html">Edit Profile</a>	
+        <a href="EditProfile.php">Edit Profile</a>	
 	</form>
 </fieldset>
