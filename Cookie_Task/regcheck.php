@@ -1,10 +1,9 @@
 <?php
-	session_start();
 
 	if(isset($_POST['submit'])){
 
 		$name = $_POST['name'];
-		$uname = $_POST['uname'];
+		$uname = $_POST['userName'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$confirmPassword = $_POST['confirmPassword'];
@@ -26,16 +25,6 @@
 			}
 			else
 			{
-				$user = [
-						'uname'=>$uname,
-						'email'=>$email,
-						'password'=>$password
-					];
-
-			$_SESSION['uname'] 		= $uname;
-			$_SESSION['email'] 		= $email;
-			$_SESSION['password'] 	= $password;
-			$_SESSION['user'] 		= $user;
 
 			setcookie('uname', $uname, time()+3600, '/');
 			setcookie('email', $email, time()+3600, '/');

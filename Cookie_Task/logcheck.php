@@ -1,9 +1,9 @@
 <?php
-	session_start();
+	
+	if(isset($_POST['LogIn']))
+	{
 
-	if(isset($_POST['submit'])){
-
-		$uname 		= $_POST['username'];
+		$uname 		= $_POST['uname'];
 		$password 	= $_POST['password'];
 
 		if(empty($uname) || empty($password)){
@@ -12,10 +12,10 @@
 		}else if( isset($_COOKIE['uname']) && isset($_COOKIE['password'])){
 			
 			if($uname == $_COOKIE['uname'] && $password == $_COOKIE['password']){
-				//$_SESSION['status']  = "Ok";
-
 				setcookie('status', "OK", time()+3600, '/');
-				header('location: home.php');
+				header('location: dashboard.php');
+
+
 
 			}else{
 				echo "Invalid username/password";
