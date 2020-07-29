@@ -8,7 +8,7 @@
 				<td>:</td>
 				<td><?php echo $_COOKIE['uname']?></td>
 				<td rowspan="7" align="center">
-					<img width="128" src="../image/user.png"/>
+					<img width="128" src="1.jpg"/>
                     <br/>
                     <a href="ChangeProfilePicture.php">Change</a>
 				</td>

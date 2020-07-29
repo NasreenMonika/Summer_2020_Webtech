@@ -1,7 +1,7 @@
 <fieldset>
     <legend><b>PROFILE PICTURE</b></legend>
     <form>
-        <img width="128" src="1.jpg" />
+        <img width="128" src="../image/user.png" />
         <br />
         <input type="file">
         <hr />
