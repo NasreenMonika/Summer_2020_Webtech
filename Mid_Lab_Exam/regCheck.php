@@ -1,39 +1,41 @@
 <?php
+if(isset($_POST['submit']))
+{
 
-	if(isset($_POST['Register'])){
+	$name = $_POST['name'];
+	$id = $_POST['id'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$confirmPassword = $_POST['confirmPassword'];
+	$userType = $_POST['userType'];
 
-		$id = $_POST['id'];
-		$password = $_POST['password'];
-		$email = $_POST['email'];
-		$confirmPassword = $_POST['confirmPassword'];
+	if(empty($id) || empty($password) || empty($email) || empty($name) || empty($confirmPassword) || empty($userType))
+	{
+		echo "null submission".'<a href="registration.html"><u>Home</a>';
+	}
+	else 
+	{
 
-		if(empty($id) || empty($password) || empty($email) || empty($name) || empty($confirmPassword) )
+		if($password!=$confirmPassword)
 		{
-			echo "null submission".'<a href="registration.html"><u>Registration</a>';
+			echo "Match Password".'<a href="registration.html"><u>Home</a>';
 		}
-		else 
+		else
 		{
 
-			if($password!=$confirmPassword)
-			{
-				echo "Match Password".'<a href="registration.html"><u>Registration</a>';
-			}
-			else
-			{
-			setcookie('email', $email, time()+3600, '/');
-			setcookie('id', $id, time()+3600, '/');
-			setcookie('password', $password, time()+3600, '/');
-			setcookie('name', $name, time()+3600, '/');
-			echo "Problem";
+		$file=fopen('user.txt','a');
+		fwrite($file,$name.'|'.$id.'|'.$email.'|'.$password.'|'.$userType."/r/n");
+		fclose($file);
 
-			header('location: login.html');
-			}
+		header('location: login.html');
 		}
-
-	}else{
-		//header("location: login.html");
-		echo "Not Set";
 	}
 
+}
+else
+{
+	//header("location: login.html");
+	echo "Not Set";
+}
 
 ?>
