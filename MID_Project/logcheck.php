@@ -11,7 +11,7 @@
 
 		}else{
 			
-			$conn = mysqli_connect('127.0.0.1', 'root', '', 'deliveryManagementSystem');
+			$conn = mysqli_connect('127.0.0.1', 'root', '', 'deliverymanagementsystem');
 			$sql = "select * from user where username='".$username."' and password='".$password."'";
 			$result = mysqli_query($conn, $sql);
 			$user 	= mysqli_fetch_assoc($result);
