@@ -2,7 +2,9 @@
 <body>
 	<center><br><br><br>
 		<input name="search" type="text">
-		<input name="submit" type="submit" value="SEARCH"><br><br><br>
+		<input name="submit" type="submit" value="SEARCH">
+		 <a href="selectOrder.php"><u><b>SELECT</a><br>		<br>
+		 <a href="medicineOrder.php"><u><b>MEDICINE ORDER</a><br><br><br>
 	<table border="1" width="700px">
 			<tr>
 				<td height="20px" width="100px">
