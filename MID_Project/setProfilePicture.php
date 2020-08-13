@@ -1,10 +1,10 @@
 <fieldset>
     <legend><b>PROFILE PICTURE</b></legend>
-    <form>
-        <img width="128" src="../image/user.png" />
+    <form action="savepic.php" method="post" enctype="multipart/form-data">
+        <img width="128" src="user.png" />
         <br />
-        <input type="file">
+        <input type="file"name="files">
         <hr />
-        <input type="submit" value="Submit">
-    </form>
+        <input type="submit" name="submit" value="Submit">
+    </form>s
 </fieldset>
