@@ -12,15 +12,21 @@
 		}else{
 			
 			$conn = mysqli_connect('127.0.0.1', 'root', '', 'deliverymanagementsystem');
-			$sql = "select * from user where username='".$username."' and password='".$password."'";
+			$sql = "select * from user where username='".$username."'&& password='".$password."'";
 			$result = mysqli_query($conn, $sql);
 			$user 	= mysqli_fetch_assoc($result);
 			
-			if(!empty($user)){
+			if(!empty($user))
+			{
+				
 				$_SESSION['status']  = "Ok";
 				setcookie('uname',$username, time()+3600, '/');
 				header('location: home.php');
-			}else{
+			
+				
+			}
+			else
+			{
 				echo "Invalid information";
 			}
 		}
