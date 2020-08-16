@@ -1,0 +1,87 @@
+<fieldset>
+    <legend><b>REGISTRATION</b></legend>
+	<form action=".../php/databaseconn.php" method="post">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><input name="name" type="text"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Email</td>
+				<td>:</td>
+				<td>
+					<input name="email" type="text">
+					<abbr title="hint: sample@example.com"><b>i</b></abbr>
+				</td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>User Name</td>
+				<td>:</td>
+				<td><input name="username" type="text"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input name="password" type="password"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td>:</td>
+				<td><input name="confirmpassword" type="password"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">
+					<fieldset>
+						<legend>Gender</legend>    
+						<input name="gender" value="Male" type="radio">Male
+						<input name="gender" value="Female" type="radio">Female
+						<input name="gender" value="Other" type="radio">Other
+					</fieldset>
+				</td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">
+					<fieldset>
+						<legend>Date of Birth</legend>    
+						<input name="date" type="Date" >
+					</fieldset>
+				</td>
+				<td></td>
+			</tr>
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">
+					<fieldset>
+						<legend>User Type</legend>
+						<select name="usertype">
+							<option value="admin">Admin</option>
+							<option value="deliveryman">Delivery Man</option>
+							<option value="restaurant">Restaurant</option>
+							<option value="customer">Customer</option>
+						</select>
+					</fieldset>
+				</td>				
+			</tr>
+			<tr>
+				<td colspan="3">
+				</td>				
+			</tr>
+		</table>
+		<hr/>
+		<input name="submit" type="submit" value="Submit">
+		<input type="reset">
+	</form>
+</fieldset>
