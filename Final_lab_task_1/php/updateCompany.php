@@ -33,5 +33,22 @@
 			}
 		}
 	}
+	if(isset($_POST['delete']))
+	{
+		$id 	= $_POST['id'];
+		$company = [
+				'id'=> $id
+			];
+
+			$status = deleteCompany($company);
+
+			if($status){
+				header('location: ../views/all_company.php?success=done');
+			}else{
+				header('location: ../views/editCompany.php?id={$id}');
+			}
+
+	}
+
 
 ?>
