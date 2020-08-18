@@ -11,7 +11,7 @@
 <body>
 
 	<a href="home.php">Back</a> |
-	<a href="../php/logout.php">Logout</a> 
+	<a href="../php/logout.php">Logout</a>
 	
 	<h3>Company list</h3>
 
@@ -35,7 +35,7 @@
 			<td><?=$company[$i]['profile_description']?></td>
 			<td><?=$company[$i]['industry']?></td>
 			<td><?=$company[$i]['company_website']?></td>
-			<td><?=$company[$i]['company_logo']?></td>
+			<td><img src=<?='"'."../php/".$company[$i]['company_logo'].'"'?>width="100%" height=20%></td>
 			<td>
 				<a href="editCompany.php?id=<?=$company[$i]['id']?>">Edit</a> |
 				<a href="deleteCompany.php?id=<?=$company[$i]['id']?>">Delete</a> 

@@ -82,6 +82,20 @@
 			return false;
 		}
 	}
+	function insertCompany($user){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "insert into companyinformation values('{$user['id']}', '{$user['company_name']}','{$user['profile_description']}', '{$user['industry']}', '{$user['company_website']}', '{$user['company_logo']}', '{$user['user_account_id']}')";
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	function getAllCompany(){
 		$conn = dbConnection();
 
