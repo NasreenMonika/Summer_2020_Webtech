@@ -1,7 +1,7 @@
 function nameValidation()
 {
 	var name=document.getElementById('name').value;
-	if(!name=="")
+	if(!(name==""))
 	{
 		if((name[0]>='A' && name[0]<='Z') ||(name[0]>='a' && name[0]<='z'))
 		{
@@ -12,7 +12,7 @@ function nameValidation()
 				{
 					if(!((name[counter]>='A' && name[counter]<='Z') ||(name[counter]>='a' && name[counter]<='z') || name[counter]=='.' || name[counter]=='-' || userName[counter]==' '))
 					{
-						document.getElementById('namemsg').innerHTML="This field can contain A-Z or a-z or . or -";
+						document.getElementById('namemgs').innerHTML="This field can contain A-Z or a-z or . or -";
 						return false;
 					}
 					counter=counter+1;
@@ -21,19 +21,19 @@ function nameValidation()
 			}
 			else
 			{
-				document.getElementById('namemsg').innerHTML="Please enter both your first and last name ";
+				document.getElementById('namemgs').innerHTML="Please enter both your first and last name ";
 				return false;
 			}
 		}
 		else
 		{
-			document.getElementById('namemsg').innerHTML="Name should be start with a letter";
+			document.getElementById('namemgs').innerHTML="Name should be start with a letter";
 			return false;
 		}
 	}
 	else
 	{
-		document.getElementById('namemsg').innerHTML="Please enter your name";
+		document.getElementById('namemgs').innerHTML="Please enter your name";
 		return false;
 	}
 	return false;
@@ -41,8 +41,8 @@ function nameValidation()
 function remover()
 {
 	var name =document.getElementById('name').value;
-	if(!name="")
+	if(name!="")
 	{
-		document.getElementById('namemsg').innerHTML="";
+		document.getElementById('namemgs').innerHTML="";
 	}
 }
