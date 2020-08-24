@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="picture.js"></script>
+</head>
+<body>
+	<form method="post" action="picture.php" onsubmit="return pictureValidation()">
+		<table>
+			<tr>
+				<td>User Id</td>
+				<td><input type="text" id="uid" name="uid" onkeyup="remover()"></td>
+				<td id="usermgs"></td>
+			</tr>
+			<tr>
+				<td>Picture</td>
+				<td><input type="file" id="picture" name="picture" ></td>
+				<td id="picturemgs"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit"  value="submit"></td>
+			</tr>
+		</table>
+
+	</form>
+
+</body>
+</html>
