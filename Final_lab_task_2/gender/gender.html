@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="gender.js"></script>
+</head>
+<body>
+	<form name="genderForm" method="post" action="gender.php" onsubmit="return genderValidation()">
+		<fieldset>
+		<legend> GENDER </legend><br>
+		<table>
+			<tr><td>
+			<input type="radio"  name="gender" value="Male" >  Male 
+			<input type="radio"  name="gender" value="Female" > Female
+			<input type="radio"  name="gender" value="Other" > Other <br>
+			</td>
+			<td id="gendermgs"></td>
+			</tr>
+			<tr>
+				
+			<td></td>
+			<td>
+			<input type="submit" name="submit" value="Submit">
+			</td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>
