@@ -41,7 +41,7 @@ function nameValidation()
 function remover()
 {
 	var name =document.getElementById('name').value;
-	if(name!="")
+	if(!name="")
 	{
 		document.getElementById('namemsg').innerHTML="";
 	}
