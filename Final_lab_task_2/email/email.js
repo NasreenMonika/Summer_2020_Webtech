@@ -14,7 +14,7 @@ function emailValidation()
 function remover()
 {
 	var email =document.getElementById('email').value;
-	if(!email="")
+	if(!(email==""))
 	{
 		document.getElementById('emailmgs').innerHTML="";
 	}
