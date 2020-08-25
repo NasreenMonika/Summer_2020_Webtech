@@ -4,7 +4,7 @@
 		<script type="text/javascript" src="personalInformation.js"></script>
 	</head>
 	<body>
-		<form method="post" action="personalInformation.php" onsubmit="return InformationValidation()">
+		<form name="form" method="post" action="personalInformation.php" onsubmit="return InformationValidation()">
 			<table border="1" width="600px"height="500px">
 				<tr>
 					<td colspan="3" align="center" height="20%"><h1>PERSON PROFILE</h1></td>
@@ -12,16 +12,19 @@
 				<tr>
 					<td width="20%">Name
 					</td>
-					<td><input type="text" name="Name" size="50px"> 
+					<td><input type="text" id="name" name="name" onkeyup="remover()" size="50px"> 
 					</td>
+					<td id="namemgs"></td>
 					<td width="5%">
 					</td>
 				</tr>
 				<tr>
 					<td >Email
 					</td>
-					<td><input type="Email" name="Email" size="50px">
+					<td><input type="Email" id="email" name="Email" size="50px">
+						<abbr title="hint: sample@example.com"><b>i</b></abbr>
 					</td>
+					<td id="emailmgs"></td>
 					<td >
 					</td>
 				</tr>
@@ -33,6 +36,7 @@
 				        <input type="radio" name="gender" value="Female" > Female
 				        <input type="radio" name="gender" value="Other" > Other 
 					</td>
+					<td id="gendermgs"></td>
 					<td >
 					</td>
 				</tr>
@@ -41,6 +45,7 @@
 					</td>
 					<td><input type="text"name="day"size="10">/<input type="text"name="month"size="10">/<input type="text"name="year"size="15"><i>(dd/mm/yyyy)</i>
 					</td>
+					<td id="dobmgs"></td>
 					<td>
 					</td>
 				</tr>
@@ -59,6 +64,7 @@
 							<option value="O-">O-</option>
 			   			 </select>
 					</td>
+					<td id="bgmgs"></td>
 					<td>
 					</td>
 				</tr>
@@ -71,6 +77,7 @@
 						<input type="checkbox" name="BSc"value="BSc.">BSc.
 						<input type="checkbox" name="MSc" value="MSc.">MSc.
 					</td>
+					<td id="degreemgs"></td>
 					<td>
 					</td>
 				</tr>
