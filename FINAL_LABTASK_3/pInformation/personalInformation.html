@@ -12,7 +12,7 @@
 				<tr>
 					<td width="20%">Name
 					</td>
-					<td><input type="text" id="name" name="name" onkeyup="remover()" size="50px"> 
+					<td><input type="text" id="name" name="name" onkeyup="nameremover()" size="50px"> 
 					</td>
 					<td id="namemgs"></td>
 					<td width="5%">
@@ -21,7 +21,7 @@
 				<tr>
 					<td >Email
 					</td>
-					<td><input type="email" id="email" name="email" size="50px">
+					<td><input type="email" id="email" name="email" onkeyup="emailremover()" size="50px">
 						<abbr title="hint: sample@example.com"><b>i</b></abbr>
 					</td>
 					<td id="emailmgs"></td>
@@ -43,7 +43,7 @@
 				<tr>
 					<td>Date of Birth
 					</td>
-					<td><input type="text"name="day"  id="day"size="10">/<input type="text"name="month" id="month"size="10">/<input type="text"name="year" id="year" size="15"><i>(dd/mm/yyyy)</i>
+					<td><input type="text"name="day"  id="day" onkeyup="dobremover()" size="10">/<input type="text"name="month" id="month"size="10">/<input type="text"name="year" id="year" size="15"><i>(dd/mm/yyyy)</i>
 					</td>
 					<td id="dobmgs"></td>
 					<td>

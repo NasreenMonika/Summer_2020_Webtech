@@ -131,3 +131,37 @@ function InformationValidation()
 
 
 }
+function nameremover()
+{
+	var name =document.getElementById('name').value;
+	if(name!="")
+	{
+		document.getElementById('namemgs').innerHTML="";
+	}
+}
+function emailremover()
+{
+	var email =document.getElementById('email').value;
+	if(!(email==""))
+	{
+		document.getElementById('emailmgs').innerHTML="";
+	}
+}
+function dobremover()
+{
+	var day=document.getElementById('day').value;
+	var month =document.getElementById('month').value;
+	var year =document.getElementById('year').value;
+	if(day!="")
+	{
+		document.getElementById('dobmgs').innerHTML="";
+	}
+	if(month!="")
+	{
+		document.getElementById('dobmgs').innerHTML="";
+	}
+	if(year!="")
+	{
+		document.getElementById('dobmgs').innerHTML="";
+	}
+}
