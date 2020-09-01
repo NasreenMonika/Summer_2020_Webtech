@@ -34,10 +34,16 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><input type="submit" name="submit" value="Submit"></td>
+					<td><input type="button" name="submit" value="Submit" onclick="f1()"> 
+						<a href="login.php" style="display: none">LogIn</a></td>
 				</tr>
 			</table>
 		</fieldset>
 	</form>
+	<script type="text/javascript">
+		function f1(){
+			document.getElementsByTagName('a')[0].style.display='inline';
+		}
+	</script>
 </body>
 </html>
