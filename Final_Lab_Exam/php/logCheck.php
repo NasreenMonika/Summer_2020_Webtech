@@ -18,11 +18,18 @@
 			];
 			
 			$status = validate($user);
+			echo $status;
 
-			if($status){
+			if($status=="admin"){
 				$_SESSION['username'] = $username;
-				header('location: ../views/home.php');
-			}else{
+				header('location: ../views/adminhome.php');
+			}
+			elseif ($status=="author") {
+				$_SESSION['username'] = $username;
+				header('location: ../views/authorhome.php');
+			}
+
+			else{
 				header('location: ../views/login.php?error=invalid_user');
 			}
 		}
