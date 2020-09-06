@@ -11,6 +11,7 @@
 	<h1>Welcome Home!<?=$_SESSION['username']?></h1> 
 	<a href="../views/register.php">Create New User</a> |
 	<a href="../views/all_users.php">User List</a> |
+	<a href="../views/search.php">Search</a> |
 	<a href="../php/logout.php">Logout</a> 
 </body>
 </html>

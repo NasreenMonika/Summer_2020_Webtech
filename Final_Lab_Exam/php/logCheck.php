@@ -22,11 +22,11 @@
 
 			if($status=="admin"){
 				$_SESSION['username'] = $username;
-				header('location: ../views/adminhome.php');
+				header('location: ../views/adminHome.php');
 			}
 			elseif ($status=="author") {
 				$_SESSION['username'] = $username;
-				header('location: ../views/authorhome.php');
+				header('location: ../views/authorHome.php');
 			}
 
 			else{

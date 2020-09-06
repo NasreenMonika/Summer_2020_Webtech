@@ -2,8 +2,8 @@
 	require_once('../php/session_header.php');
 	require_once('../service/userService.php');
 
-	if (isset($_GET['id'])) {
-		$user = getByID($_GET['id']);	
+	if (isset($_GET['username'])) {
+		$user = getByIDBlog($_GET['username'],$_GET['id']);	
 	}else{
 		header('location: all_users.php');
 	}
@@ -28,20 +28,14 @@
 					<td id="usernamemsg"></td>
 				</tr>
 				<tr>
-					<td>Password</td>
-					<td><input type="password" id="password" name="password" value="<?=$user['password']?>"></td>
+					<td>Blog Id</td>
+					<td><input type="text" id="password" name="password" value="<?=$user['blogId']?>"></td>
 				</tr>
 				<tr>
-					<td>Contact</td>
-					<td><input type="text" id="contact" name="contact" value="<?=$user['contact']?>"></td>
+					<td>Body</td>
+					<td><input type="text" id="contact" name="contact" value="<?=$user['blogbody']?>"></td>
 					<td id="contactmsg"></td>
 				</tr>
-				
-				<tr>
-					<td>Name</td>
-					<td><input type="text" id="name" name="username" value="<?=$user['name']?>"></td>
-				</tr>
-
 				<tr>
 					<td></td>
 					<td><input type="button" name="submit" value="Submit" onclick="f1()">
